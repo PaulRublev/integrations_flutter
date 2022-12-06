@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:integrations_flutter/src/service.dart';
+import 'package:integrations_flutter/src/platform/android/platform_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -8,37 +12,51 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
+  final _service = PlatformService();
+  // int _counter = 0;
+  String _nativeText = '';
+  // StreamSubscription? _subscription;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  void _getValue() async {
+    _nativeText = await _service.callMethodChannel('Dva');
+    setState(() {});
   }
+
+  // void _getStream() async {
+  //   _service.callEvent().listen((event) {
+  //     setState(() {
+  //       _counter = event;
+  //     });
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(''),
+        title: Text(_nativeText),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            SizedBox(
+              child: const PlatformWidget(),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            StreamBuilder(
+              stream: _service.callEvent(),
+              builder: (context, snapshot) {
+                return Text(
+                    snapshot.hasData ? snapshot.data.toString() : 'No data');
+              },
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        onPressed: _getValue,
+        tooltip: 'Random',
+        heroTag: null,
         child: const Icon(Icons.add),
       ),
     );
