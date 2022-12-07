@@ -47,7 +47,7 @@ class JsInteropManager extends EventEmitter {
     }
 
     getValueFromJs() {
-        return 'Math.floor(Math.random() * 500)';
+        return 'text';
     }
 }
 

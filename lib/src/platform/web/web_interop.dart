@@ -2,6 +2,7 @@
 library interop;
 
 import 'dart:async';
+import 'dart:ui' as ui;
 
 import 'package:js/js.dart';
 
@@ -21,7 +22,7 @@ typedef _ClicksManagerEventListener = void Function(_JsInteropEvent event);
 class _JsInteropManager {
   external dynamic get buttonElement;
 
-  external int getValueFromJs();
+  external String getValueFromJs();
 
   external void addEventListener(
     String event,
@@ -85,7 +86,7 @@ class InteropManager {
         .map((event) => event.value);
   }
 
-  int getValueFromJs() => _interop.getValueFromJs();
+  String getValueFromJs(String text) => _interop.getValueFromJs();
 
   Stream<int> get buttonClicked => _buttonClicked;
 }

@@ -1,5 +1,7 @@
 import 'package:integrations_flutter/src/service.dart';
 
+export 'platform_widget.dart';
+
 class PlatformServiceImpl implements PlatformService {
   @override
   Future<String> callMethodChannel(String text) async {

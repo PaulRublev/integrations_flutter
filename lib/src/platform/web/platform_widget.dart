@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+export 'platform_widget.dart';
+
 class PlatformWidget extends StatelessWidget {
   const PlatformWidget({super.key});
 

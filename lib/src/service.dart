@@ -3,9 +3,7 @@ import 'platform/other/other_service.dart'
     if (dart.library.io) 'platform/android/android_service.dart';
 
 abstract class PlatformService {
-  Future<String> callMethodChannel(String text);
-
-  Stream<int> callEvent();
+  Future<void> callMethodChannel(String text);
 }
 
 PlatformService getService() {
