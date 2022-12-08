@@ -6,15 +6,13 @@ import io.flutter.plugin.common.StandardMessageCodec
 import io.flutter.plugin.platform.PlatformView
 import io.flutter.plugin.platform.PlatformViewFactory
 
-class AndroidButtonViewFactory(messenger: BinaryMessenger, private var label: String?) : PlatformViewFactory(StandardMessageCodec.INSTANCE) {
+class AndroidTextViewFactory(messenger: BinaryMessenger, private var label: String?) : PlatformViewFactory(StandardMessageCodec.INSTANCE) {
 
     private val binaryMessenger: BinaryMessenger = messenger
 
     override fun create(context: Context, viewId: Int, args: Any?): PlatformView {
-        var creationParams: MutableMap<String?, Any?> = mutableMapOf() //args as Map<String?, Any?>?
-        //creationParams?.plus(args as Map<String?, Any?>?)
+        var creationParams: MutableMap<String?, Any?> = mutableMapOf()
         creationParams["name"] = label
-//        var viewId = 111
-        return AndroidButtonView(context, viewId, creationParams, binaryMessenger)
+        return AndroidTextView(context, viewId, creationParams, binaryMessenger)
     }
 }
