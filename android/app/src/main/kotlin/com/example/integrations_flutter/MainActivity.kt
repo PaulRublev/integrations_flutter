@@ -39,9 +39,9 @@ class MainActivity: FlutterActivity() {
             if (call.method == intentMessageId) {
                 var args = call.arguments as List<*>
                 text = args.first().toString()
-//                val button = findViewById<Button>(R.id.)
-//                button.text = text
-//                button.refreshDrawableState()
+                val button = findViewById<Button>(123)
+                button.text = text
+                button.refreshDrawableState()
                 result.success(args.first().toString())
 //                result.success(Random.nextInt(0,500))
             } else {

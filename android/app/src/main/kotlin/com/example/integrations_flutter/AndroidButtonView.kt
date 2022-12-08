@@ -1,5 +1,6 @@
 package com.example.integrations_flutter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.View
@@ -8,6 +9,7 @@ import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.platform.PlatformView
 import kotlin.random.Random
 
+@SuppressLint("ResourceType")
 internal class AndroidButtonView(context: Context, id: Int, creationParams: Map<String?, Any?>?, messenger: BinaryMessenger) : PlatformView {
     private val button: Button = Button(context)
 
@@ -26,7 +28,7 @@ internal class AndroidButtonView(context: Context, id: Int, creationParams: Map<
         } else {
             creationParams["name"] as String
         }
-
+        button.id = 123
         button.textSize = 13f
         button.text = text
         button.setOnClickListener {
