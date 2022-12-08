@@ -11,7 +11,7 @@ class PlatformWidget extends StatelessWidget {
       height: 50,
       width: 200,
       child: HtmlElementView(
-        viewType: 'web-button',
+        viewType: 'web-label',
       ),
     );
   }

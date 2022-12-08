@@ -34,31 +34,15 @@ class JsInteropManager extends EventEmitter {
     constructor() {
         super();
 
-        this.buttonElement = document.createElement('button');
-        this.buttonElement.innerText = 'Web button';
-
-        window.addEventListener('click', (e) => {
-            if (e.target === this.buttonElement) {
-                const interopEvent = new JsInteropEvent(Math.floor(Math.random() * 500));
-            }
-        });
-
-        window._clickManager = this;
+        this.labelElement = document.createElement('label');
+        this.labelElement.innerText = 'Web label';
     }
 
-    getValueFromJs() {
-        return 'text';
-    }
-}
-
-class JsInteropEvent {
-    constructor(value) {
-        this.type = 'InteropEvent';
-        this.value = value;
+    setValueToJs(value) {
+        this.labelElement.innerText = value;
     }
 }
 
 window.ClicksNamespace = {
     JsInteropManager,
-    JsInteropEvent,
 }

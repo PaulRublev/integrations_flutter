@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:integrations_flutter/src/service.dart';
 
@@ -17,8 +15,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final _service = getService();
   final TextEditingController _editingController =
-      TextEditingController(text: '');
-  // StreamSubscription? _subscription;
+      TextEditingController(text: 'init');
 
   void _setValue() async {
     await _service.callMethodChannel(_editingController.value.text);
@@ -31,14 +28,28 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            const PlatformWidget(),
-            TextField(
-              controller: _editingController,
-              style: const TextStyle(fontWeight: FontWeight.w800),
-              decoration: const InputDecoration(
-                enabledBorder: OutlineInputBorder(),
-                focusedBorder: OutlineInputBorder(),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.black,
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: const PlatformWidget(),
+            ),
+            const SizedBox(height: 5),
+            SizedBox(
+              width: 200,
+              child: TextField(
+                controller: _editingController,
+                style: const TextStyle(fontWeight: FontWeight.w800),
+                decoration: const InputDecoration(
+                  enabledBorder: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(),
+                ),
               ),
             ),
           ],
@@ -46,16 +57,10 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _setValue,
-        tooltip: 'Random',
+        tooltip: 'set label text',
         heroTag: null,
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.arrow_circle_up),
       ),
     );
   }
-
-  // @override
-  // void dispose() {
-  //   _subscription?.cancel();
-  //   super.dispose();
-  // }
 }

@@ -1,9 +1,11 @@
 package com.example.integrations_flutter
 
+import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.widget.Button
 import androidx.annotation.NonNull
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -21,19 +23,25 @@ class MainActivity: FlutterActivity() {
     private val intentMessageId = "CALL" 
 
     private var receiver: BroadcastReceiver? = null
+    private var text: String? = "button"
 //    lateinit var job: Job
 
+    @SuppressLint("ResourceType")
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         flutterEngine
             .platformViewsController
             .registry
-            .registerViewFactory(androidViewId, AndroidButtonViewFactory(flutterEngine.dartExecutor.binaryMessenger))
+            .registerViewFactory(androidViewId, AndroidButtonViewFactory(flutterEngine.dartExecutor.binaryMessenger, text))
 
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, methodChannel).setMethodCallHandler {
             call, result ->
             if (call.method == intentMessageId) {
                 var args = call.arguments as List<*>
+                text = args.first().toString()
+//                val button = findViewById<Button>(R.id.)
+//                button.text = text
+//                button.refreshDrawableState()
                 result.success(args.first().toString())
 //                result.success(Random.nextInt(0,500))
             } else {

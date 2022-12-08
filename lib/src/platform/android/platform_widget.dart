@@ -20,7 +20,7 @@ class PlatformWidget extends StatelessWidget {
         surfaceFactory: ((context, controller) {
           return AndroidViewSurface(
             controller: controller as AndroidViewController,
-            hitTestBehavior: PlatformViewHitTestBehavior.opaque,
+            hitTestBehavior: PlatformViewHitTestBehavior.translucent,
             gestureRecognizers: const <Factory<OneSequenceGestureRecognizer>>{},
           );
         }),

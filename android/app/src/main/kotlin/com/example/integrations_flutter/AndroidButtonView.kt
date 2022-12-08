@@ -21,8 +21,14 @@ internal class AndroidButtonView(context: Context, id: Int, creationParams: Map<
     override fun dispose() {}
 
     init {
+        var text = if (creationParams == null) {
+            "Button"
+        } else {
+            creationParams["name"] as String
+        }
+
         button.textSize = 13f
-        button.text = "Button"
+        button.text = text
         button.setOnClickListener {
             val intent = Intent(intentName)
             intent.putExtra(intentMessageId, Random.nextInt(0,500))

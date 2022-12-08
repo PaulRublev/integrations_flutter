@@ -6,12 +6,7 @@ class PlatformServiceImpl implements PlatformService {
   final _manager = InteropManager();
 
   @override
-  Stream<int> callEvent() {
-    return _manager.buttonClicked;
-  }
-
-  @override
-  Future<String> callMethodChannel(String text) async {
-    return _manager.getValueFromJs(text);
+  Future<void> callMethodChannel(String text) async {
+    _manager.setValueToJs(text);
   }
 }
