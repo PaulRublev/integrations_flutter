@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:integrations_flutter/src/service.dart';
+import 'package:integrations_flutter/src/pigeon.dart';
 
-import '../platform/other/platform_widget.dart'
-    if (dart.library.html) '../platform/web/platform_widget.dart'
-    if (dart.library.io) '../platform/android/platform_widget.dart';
+import 'platform_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,14 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _service = getService();
   final TextEditingController _editingController =
       TextEditingController(text: 'init');
-
-  void _setValue() async {
-    await _service.callMethodChannel(_editingController.value.text);
-    setState(() {});
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,11 +48,17 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _setValue,
+        onPressed: () {
+          _setText(_editingController.value.text);
+        },
         tooltip: 'set label text',
         heroTag: null,
         child: const Icon(Icons.arrow_circle_up),
       ),
     );
+  }
+
+  void _setText(String text) async {
+    await ServiceApi().setLabelText(text);
   }
 }
