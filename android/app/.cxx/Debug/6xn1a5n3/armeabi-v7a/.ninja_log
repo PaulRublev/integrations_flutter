@@ -1,0 +1,15 @@
+# ninja log v5
+0	98	1670773911	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	88d2e5ed9c139016
+98	150	1670773911	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/armeabi-v7a/libcalc.so	e440b2ae41b56362
+4	353	1670780744	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	88d2e5ed9c139016
+353	467	1670780744	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/armeabi-v7a/libcalc.so	e440b2ae41b56362
+2	147	1670781030	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	88d2e5ed9c139016
+147	260	1670781030	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/armeabi-v7a/libcalc.so	e440b2ae41b56362
+3	396	1670781824	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	88d2e5ed9c139016
+396	505	1670781824	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/armeabi-v7a/libcalc.so	e440b2ae41b56362
+3	146	1670782078	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	88d2e5ed9c139016
+146	237	1670782078	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/armeabi-v7a/libcalc.so	e440b2ae41b56362
+3	136	1670783091	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	88d2e5ed9c139016
+136	1152	1670783092	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/armeabi-v7a/libcalc.so	e440b2ae41b56362
+0	132	1670785040	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	88d2e5ed9c139016
+132	233	1670785040	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/armeabi-v7a/libcalc.so	e440b2ae41b56362

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:integrations_flutter/src/pigeon.dart';
 
+import '../ffi_bridge.dart';
 import 'platform_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,6 +14,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final TextEditingController _editingController =
       TextEditingController(text: 'init');
+  final _bridge = FFIBridge();
+  int textLength = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +41,10 @@ class _HomePageState extends State<HomePage> {
               child: TextField(
                 controller: _editingController,
                 style: const TextStyle(fontWeight: FontWeight.w800),
-                decoration: const InputDecoration(
-                  enabledBorder: OutlineInputBorder(),
-                  focusedBorder: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  enabledBorder: const OutlineInputBorder(),
+                  focusedBorder: const OutlineInputBorder(),
+                  labelText: 'Length: ${textLength.toString()}',
                 ),
               ),
             ),
@@ -50,6 +54,8 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _setText(_editingController.value.text);
+          textLength = _getLength(_editingController.value.text);
+          setState(() {});
         },
         tooltip: 'set label text',
         heroTag: null,
@@ -60,5 +66,9 @@ class _HomePageState extends State<HomePage> {
 
   void _setText(String text) async {
     await ServiceApi().setLabelText(text);
+  }
+
+  int _getLength(String text) {
+    return _bridge.getCLength(text);
   }
 }

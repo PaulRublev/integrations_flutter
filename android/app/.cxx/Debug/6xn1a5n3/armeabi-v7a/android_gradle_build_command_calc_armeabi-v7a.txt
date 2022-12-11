@@ -1,0 +1,7 @@
+Executable : /Users/paulrublev/Library/Android/sdk/cmake/3.18.1/bin/ninja
+arguments : 
+-C
+/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/android/app/.cxx/Debug/6xn1a5n3/armeabi-v7a
+calc
+jvmArgs : 
+

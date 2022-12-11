@@ -1,0 +1,15 @@
+# ninja log v5
+0	81	1670773914	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	5538536636329cf7
+82	132	1670773915	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/x86/libcalc.so	7fe626f75aac2355
+2	187	1670780744	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	5538536636329cf7
+187	345	1670780744	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/x86/libcalc.so	7fe626f75aac2355
+0	123	1670781030	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	5538536636329cf7
+123	211	1670781030	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/x86/libcalc.so	7fe626f75aac2355
+424	637	1670781825	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	5538536636329cf7
+637	710	1670781825	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/x86/libcalc.so	7fe626f75aac2355
+2	114	1670782078	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	5538536636329cf7
+114	213	1670782078	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/x86/libcalc.so	7fe626f75aac2355
+1	107	1670783093	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	5538536636329cf7
+108	190	1670783093	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/x86/libcalc.so	7fe626f75aac2355
+1	101	1670785040	CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o	5538536636329cf7
+102	372	1670785041	/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/build/app/intermediates/cxx/Debug/6xn1a5n3/obj/x86/libcalc.so	7fe626f75aac2355

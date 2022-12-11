@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   js: ^0.6.5
   pigeon: ^4.2.10
+  ffi: ^2.0.1
 
 dev_dependencies:
   flutter_test:
