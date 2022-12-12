@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/android/app/.cxx/Debug/6xn1a5n3/x86",
-  "command": "/Users/paulrublev/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=i686-none-linux-android16 --gcc-toolchain=/Users/paulrublev/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/paulrublev/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcalc_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC -o CMakeFiles/calc.dir/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c.o -c /Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c",
-  "file": "/Users/paulrublev/Projects/flutter/SkillBoxHW/19/integrations_flutter/src/calc.c"
-}
-]
